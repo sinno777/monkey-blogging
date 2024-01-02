@@ -2,7 +2,8 @@ import React, { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { AuthProvider } from "./contexts/auth-context";
 
-// const HomePage = React.lazy(() => import("pages/HomePage"));
+// const SignUpPage = React.lazy(() => import("pages/SignUpPage"));
+const SignUpPage = React.lazy(() => import("pages/SignUpPage"));
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <AuthProvider>
         <Suspense>
           <Routes>
-            <Route path="/" element={<></>}></Route>
+            <Route path="/sign-up" element={<SignUpPage></SignUpPage>}></Route>
           </Routes>
         </Suspense>
       </AuthProvider>
